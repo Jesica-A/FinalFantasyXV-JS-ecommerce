@@ -1,0 +1,84 @@
+a {
+    color: $colorPrimary !important;
+    text-decoration: none;
+    transition: color 0.7s;
+
+    &:hover {
+        color: $colorSecundary !important;
+    }
+}
+
+a:not([href]) {
+    color: $colorPrimary;
+    text-decoration: none;
+}
+
+.btn {
+    @extend %button;
+    background: transparent;
+    box-shadow: inset 0 0 8px $colorShadow;
+}
+
+h1,
+h2,
+#navbarNav {
+    font-family: $fontTitle;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.navbar {
+    background-color: $backgroundTransparent1 !important;
+    padding: 0rem 1rem .5rem 1rem;
+    a.navbar-brand {
+        svg {
+            width: 220px ;
+        }
+        font-size: 2rem;
+        text-transform: uppercase;
+        margin-top: 1rem;
+    }
+    form {
+        margin-right: 1.6rem;
+    }
+    .nav-item {
+        position: relative;
+        
+        img {
+            cursor: pointer;
+            width: 3rem;
+        }
+        span {
+            transition: all .5s ease-in-out;
+            &.show {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 2rem;
+                width: 2rem;
+                background-color: $backgroundTransparent2;
+                border-radius: 50%;
+                font-size: .8rem;
+                font-size: 1.1rem;
+                text-align: center;
+                font-weight: bold   ;
+            }
+        }
+    }
+}
+
+#navbarNav {
+    justify-content: flex-end;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+    color: $colorPrimary !important;
+}
+
+.nav-item {
+    padding-left: 1em;
+}
